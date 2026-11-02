@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: "Independent research in philosophy, science, intelligence, and operational forms.",
 };
 
-export const viewport: Viewport = { themeColor: "#F7F7F4", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#040506", width: "device-width", initialScale: 1 };
 
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
   const { locale } = await params;

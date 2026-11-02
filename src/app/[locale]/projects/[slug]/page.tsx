@@ -5,6 +5,8 @@ import { ExperimentCard, PublicationRow, RelationTable } from "@/components/rese
 import { nodeById } from "@/data/research/nodes";
 import { sectionById } from "@/data/research/sections";
 import { history } from "@/data/research/history";
+import { visuals } from "@/data/visuals";
+import { VisualFigure } from "@/components/research/VisualFigure";
 import { experimentsFor, nodeKindLabel, projectNodes, publicationsFor, relationsFor } from "@/lib/research/queries";
 import { locales, type Locale } from "@/lib/i18n/config";
 import { pageMetadata } from "@/lib/metadata";
@@ -43,6 +45,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
   const hist = history.filter((h) => h.relatedNodes.includes(n.id));
   const negative = exps.flatMap((e) => e.negativeFindings.map((f) => ({ e, f })));
   const repo = repoFor[n.id];
+  const figs = visuals.filter((v) => v.nodeId === n.id);
   const content = locale === "ja" ? "en" : undefined;
 
   return (
@@ -68,6 +71,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
             {n.status && <p className="mono mt-4 text-xs text-muted">Status: {n.status}</p>}
             <SourceList ids={n.sources} locale={locale} />
           </Section>
+
+          {figs.length > 0 && (
+            <Section id="visuals" title="Visual materials">
+              <div className="space-y-6">{figs.map((v) => <VisualFigure key={v.id} v={v} locale={locale} />)}</div>
+            </Section>
+          )}
 
           {n.distinctions && n.distinctions.length > 0 && (
             <Section id="distinctions" title="Conceptual distinctions">

@@ -61,9 +61,13 @@ export function SourceList({ ids, locale }: { ids: string[]; locale: Locale }) {
           if (!s) return null;
           return (
             <li key={id}>
-              <a href={s.url} rel="noopener noreferrer">
-                {s.title}
-              </a>{" "}
+              {s.url ? (
+                <a href={s.url} rel="noopener noreferrer">
+                  {s.title}
+                </a>
+              ) : (
+                <span className="text-foreground">{s.title}</span>
+              )}{" "}
               <span className="mono text-xs">
                 · {s.scope} · {t.retrieved} {s.retrieved}
               </span>

@@ -322,10 +322,14 @@ export const nodes: ResearchNode[] = [
     id: "robotics",
     kind: "system",
     title: "P/A — Xenoantiphilosophical AI Robotics Project",
-    summary: "Listed on the personal site with a link to a project page. The project page content was not recovered.",
+    subtitle: "Xenoscience & Posthuman Cybernetics",
+    summary:
+      "Listed on the personal site. An author-supplied design sheet (no. 23, “Monolithic Disconnection: Structural Separation and Functional Reconfiguration”) is shown on this page. No build, test, or experiment record for the project was recovered.",
+    notClaimed: ["The design sheet is a design visual. It is not a photograph of a built prototype and not an experimental record; dimensions on it are design values."],
+    status: "Design stage (no build record recovered)",
     sections: ["intelligence", "embodiment"],
     grounding: "title-only",
-    sources: ["ps-home"],
+    sources: ["ps-home", "author-robotics-23"],
   },
   // ── Earlier research ──────────────────────────────────────────
   {

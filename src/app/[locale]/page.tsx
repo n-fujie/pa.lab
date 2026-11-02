@@ -30,7 +30,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     <>
       <section className="border-b border-border pb-10 pt-12 md:pt-20">
         <p className="eyebrow mb-4">Independent Research Infrastructure</p>
-        <h1 className="serif max-w-[22ch] text-4xl leading-[1.1] md:text-6xl">
+        <h1 className="neon serif max-w-[22ch] text-4xl leading-[1.1] md:text-6xl">
           Independent Research in Philosophy, Science, Intelligence, and Operational Forms
         </h1>
         <p className="prose-block mt-6 text-lg text-muted" lang={locale === "ja" ? "en" : undefined}>

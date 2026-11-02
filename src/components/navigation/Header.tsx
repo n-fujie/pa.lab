@@ -22,13 +22,15 @@ export function Header({ locale }: { locale: Locale }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
       <a href="#main" className="sr-only-focusable absolute left-2 top-2 z-50 bg-surface p-2">
         {t.skip}
       </a>
       <div className="wrap flex h-14 items-center justify-between gap-4">
-        <Link href={`/${locale}`} className="mono text-sm font-semibold tracking-[0.18em] text-foreground no-underline">
-          P/A INSTITUTE
+        <Link href={`/${locale}`} className="flex items-center gap-3 text-foreground no-underline" aria-label="P/A Institute — home">
+          {/* eslint-disable-next-line @next/next/no-img-element -- small static logo; screen blend removes its black ground */}
+          <img src="/images/pa-logo.png" alt="" width={400} height={168} className="h-6 w-auto mix-blend-screen" />
+          <span className="mono text-xs font-semibold tracking-[0.24em]">INSTITUTE</span>
         </Link>
         <nav aria-label="Primary" className="hidden lg:block">
           <ul className="flex items-center gap-5">

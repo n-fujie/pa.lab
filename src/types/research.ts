@@ -10,12 +10,14 @@ export type SourceKind =
   | "philpapers"
   | "archive-api"
   | "deployment"
-  | "bookstore";
+  | "bookstore"
+  | "author-supplied";
 
 export type Source = {
   id: string;
   kind: SourceKind;
   title: string;
+  /** Empty for material handed over directly by the author. */
   url: string;
   retrieved: string; // ISO date
   /** What exactly was read: whole page, README, title only, etc. */

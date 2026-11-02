@@ -6,6 +6,7 @@ import { experiments } from "@/data/experiments/experiments";
 import { publications } from "@/data/publications/publications";
 import { history } from "@/data/research/history";
 import { methods } from "@/data/research/methods";
+import { visuals } from "@/data/visuals";
 
 export type IntegrityIssue = { where: string; problem: string };
 
@@ -35,7 +36,7 @@ export function checkIntegrity(): IntegrityIssue[] {
   unique("publications", publications.map((p) => p.id));
 
   for (const s of sources) {
-    if (!/^https:\/\//.test(s.url)) push(`source ${s.id}`, "url must be https");
+    if (s.kind !== "author-supplied" && !/^https:\/\//.test(s.url)) push(`source ${s.id}`, "url must be https");
     if (!/^\d{4}-\d{2}-\d{2}$/.test(s.retrieved)) push(`source ${s.id}`, "retrieved must be an ISO date");
   }
 
@@ -86,6 +87,14 @@ export function checkIntegrity(): IntegrityIssue[] {
   }
 
   for (const m of methods) for (const src of m.sources) if (!sourceIds.has(src)) push(`method ${m.id}`, `unknown source ${src}`);
+
+  for (const v of visuals) {
+    if (!nodeIds.has(v.nodeId)) push(`visual ${v.id}`, `unknown node ${v.nodeId}`);
+    if (v.sources.length === 0) push(`visual ${v.id}`, "visual needs a source");
+    for (const src of v.sources) if (!sourceIds.has(src)) push(`visual ${v.id}`, `unknown source ${src}`);
+    if (v.alt.trim().length < 20) push(`visual ${v.id}`, "visual needs descriptive alt text");
+    if (v.disclosure.trim() === "") push(`visual ${v.id}`, "visual needs a disclosure of what it is");
+  }
 
   return issues;
 }

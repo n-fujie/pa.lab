@@ -20,6 +20,7 @@ export const sources: Source[] = [
   { id: "dep-xzs-app", kind: "deployment", title: "Xeno Ziran Simulator — Browser Edition", url: "https://xeno-ziran.platodesignlab.com/app/", retrieved: R, scope: "HTTP reachability only (200)" },
   { id: "dep-teoo", kind: "deployment", title: "BODY / TOTAL OBSERVATION — read-only synthetic preview", url: "https://teoo-preview.vercel.app/", retrieved: R, scope: "HTML shell and title only" },
   { id: "dep-tii", kind: "deployment", title: "TII Archive", url: "https://tiiarchive.vercel.app/", retrieved: R, scope: "HTTP reachability only (200)" },
+  { id: "author-robotics-23", kind: "author-supplied", title: "Author-supplied design sheet — P/A Xenoantiphilosophical AI Robotics Project, no. 23 “Monolithic Disconnection”", url: "", retrieved: "2026-11-02", scope: "Image supplied by the author in conversation" },
   { id: "pp-profile", kind: "philpapers", title: "PhilPapers — author profile", url: "https://philpapers.org/profile/240588", retrieved: R, scope: "Linked from personal site; not read" },
 ];
 

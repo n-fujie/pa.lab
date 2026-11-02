@@ -5,6 +5,8 @@ import { ExperimentCard } from "@/components/research/blocks";
 import { deployments, directiveFeatures, labAreas, simulatorViews, xzrCommands, type LabArea } from "@/data/laboratory";
 import { experiments } from "@/data/experiments/experiments";
 import { nodeById } from "@/data/research/nodes";
+import { visuals } from "@/data/visuals";
+import { VisualFigure } from "@/components/research/VisualFigure";
 import { locales, type Locale } from "@/lib/i18n/config";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -105,6 +107,9 @@ export default async function LabAreaPage({ params }: { params: Promise<{ locale
             <div className="panel p-5">
               <h3 className="serif text-xl"><Link href={`/${locale}/projects/robotics`} className="text-foreground">{robotics.title}</Link></h3>
               <p className="mt-2 text-sm">{robotics.summary}</p>
+            </div>
+            <div className="mt-6 space-y-6">
+              {visuals.filter((v) => v.nodeId === "robotics").map((v) => <VisualFigure key={v.id} v={v} locale={locale} />)}
             </div>
             <p className="mt-4 max-w-[72ch] text-sm text-muted">Simulated planar embodiments (MuJoCo Walker2d-v5, Hopper-v5) are used in the Xeno-14 and Active Inference experiments; see Experiments. No physical robot record was recovered.</p>
           </Section>
