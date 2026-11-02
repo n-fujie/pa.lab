@@ -8,4 +8,9 @@ export const site = {
   orcid: "https://orcid.org/0009-0003-0435-181X",
   github: "https://github.com/n-fujie",
   philpapers: "https://philpapers.org/profile/240588",
+  /** Social links supplied by the author. */
+  social: [
+    { label: "X / @philailab", url: "https://x.com/philailab" },
+    { label: "Patreon / xenoantiphilosophy", url: "https://www.patreon.com/cw/xenoantiphilosophy" },
+  ],
 };

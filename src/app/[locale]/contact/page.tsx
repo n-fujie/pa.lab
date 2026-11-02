@@ -42,6 +42,13 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
             <li><a href={site.github} rel="noopener noreferrer">GitHub ↗</a></li>
           </ul>
         </Section>
+        <Section title="Social">
+          <ul className="list-dash text-sm">
+            {site.social.map((s) => (
+              <li key={s.url}><a href={s.url} rel="noopener noreferrer">{s.label} ↗</a></li>
+            ))}
+          </ul>
+        </Section>
       </div>
     </>
   );

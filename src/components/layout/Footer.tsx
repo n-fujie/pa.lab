@@ -25,6 +25,9 @@ export function Footer({ locale }: { locale: Locale }) {
           <li><a href={site.archiveUrl} rel="noopener">{t.archive} ↗</a></li>
           <li><a href={site.github} rel="noopener noreferrer">GitHub ↗</a></li>
           <li><a href={site.orcid} rel="noopener noreferrer">ORCID ↗</a></li>
+          {site.social.map((s) => (
+            <li key={s.url}><a href={s.url} rel="noopener noreferrer">{s.label} ↗</a></li>
+          ))}
         </ul>
       </div>
     </footer>
