@@ -8,7 +8,7 @@ export function VisualFigure({ v, locale }: { v: Visual; locale: Locale }) {
   return (
     <figure className="panel p-3 md:p-4">
       <p className="mb-3">
-        <Tag tone={v.kind === "design-visual" || v.kind === "artwork" ? "brown" : "blue"}>{visualKindLabel[v.kind]}</Tag>
+        <Tag tone={v.kind === "design-visual" || v.kind === "artwork" || v.kind === "interface-visual" ? "brown" : "blue"}>{visualKindLabel[v.kind]}</Tag>
       </p>
       <Image src={v.src} alt={v.alt} width={v.width} height={v.height} sizes="(min-width: 1200px) 1136px, 100vw" className="h-auto w-full" />
       <figcaption className="mt-3 text-sm">

@@ -37,6 +37,11 @@ function Simulators({ locale }: { locale: Locale }) {
           ))}
         </ul>
       </Section>
+      <Section id="visuals" title="Visual materials">
+        <div className="space-y-6">
+          {visuals.filter((v) => v.nodeId === "xz-runtime").map((v) => <VisualFigure key={v.id} v={v} locale={locale} />)}
+        </div>
+      </Section>
       <Section id="views" title="Research-result views (confirmed in public deployment)" note="A null result in any view means no difference detected above the stated noise floor at that resolution and time window — not that no difference exists.">
         <ul className="mono grid gap-2 text-sm sm:grid-cols-2 md:grid-cols-3">
           {simulatorViews.map((v) => <li key={v} className="panel px-3 py-2">{v}</li>)}

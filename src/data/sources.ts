@@ -21,6 +21,7 @@ export const sources: Source[] = [
   { id: "dep-teoo", kind: "deployment", title: "BODY / TOTAL OBSERVATION — read-only synthetic preview", url: "https://teoo-preview.vercel.app/", retrieved: R, scope: "HTML shell and title only" },
   { id: "dep-tii", kind: "deployment", title: "TII Archive", url: "https://tiiarchive.vercel.app/", retrieved: R, scope: "HTTP reachability only (200)" },
   { id: "author-robotics-23", kind: "author-supplied", title: "Author-supplied design sheet — P/A Xenoantiphilosophical AI Robotics Project, no. 23 “Monolithic Disconnection”", url: "", retrieved: "2026-11-02", scope: "Image supplied by the author in conversation" },
+  { id: "author-visuals-batch-2", kind: "author-supplied", title: "Author-supplied images — simulator interface, XB-08 design sheet, robotics artwork", url: "", retrieved: "2026-11-02", scope: "Images supplied by the author in conversation; capture method not stated" },
   { id: "pp-profile", kind: "philpapers", title: "PhilPapers — author profile", url: "https://philpapers.org/profile/240588", retrieved: R, scope: "Linked from personal site; not read" },
 ];
 
