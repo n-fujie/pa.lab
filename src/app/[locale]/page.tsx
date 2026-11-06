@@ -67,8 +67,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </Section>
 
       <Section id="systems" title="Experimental systems" note="Links go to the real deployments. Nothing on this site imitates their behaviour.">
-        <ul className="grid gap-4 md:grid-cols-3">
-          {deployments.filter((d) => d.url).slice(0, 3).map((d) => (
+        <ul className="grid gap-4 md:grid-cols-2">
+          {deployments.filter((d) => d.url).slice(0, 4).map((d) => (
             <li key={d.id} className="panel p-5">
               <p className="mono mb-2 text-xs text-muted">{d.state}</p>
               <h3 className="font-semibold"><a href={d.url!} rel="noopener noreferrer">{d.title} ↗</a></h3>
