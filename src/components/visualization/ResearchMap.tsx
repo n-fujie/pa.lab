@@ -33,7 +33,7 @@ const typeColor: Partial<Record<ResearchRelationType, string>> = {
   "unresolved-connection": "var(--deep-red)",
 };
 
-const shortLabel = (title: string) => title.split(" — ")[0].replace(/^Ziran \/ Xeno Operational World Simulator$/, "Ziran/Xeno Simulator").replace(/^XENO ZIRAN SIMULATOR runtime$/, "XZS runtime");
+const shortLabel = (title: string) => title.split(" — ")[0].replace(/^Ziran \/ Xeno Operational World Simulator$/, "Ziran/Xeno Simulator").replace(/^P\/A SYSTEM runtime \(formerly XENO ZIRAN SIMULATOR\)$/, "P/A SYSTEM runtime");
 
 function NodeShape({ kind, selected }: { kind: NodeKind; selected: boolean }) {
   const stroke = selected ? "var(--deep-red)" : "var(--foreground)";

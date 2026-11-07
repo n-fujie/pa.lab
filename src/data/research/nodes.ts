@@ -256,7 +256,7 @@ export const nodes: ResearchNode[] = [
   {
     id: "xz-runtime",
     kind: "system",
-    title: "XENO ZIRAN SIMULATOR runtime",
+    title: "P/A SYSTEM runtime (formerly XENO ZIRAN SIMULATOR)",
     subtitle: "xeno-ziran-runtime · xzr toolkit, web and iOS simulator",
     summary:
       "A simulation runtime in which differences ignite, propagate, are retained as memory, cut and reconfigure connections across a field of configurations — plus instruments to vary scale, topology, memory, coupling, horizon, boundary and observation resolution.",
@@ -290,7 +290,7 @@ export const nodes: ResearchNode[] = [
     subtitle: "XenoBody Transitional Re-entry Operations",
     summary:
       "A planar body simulator that generates experiment records for bodily operational transitions, askesis sequences, and boundary conditions. Research Beta; 15 experiment records generated; claim-evidence ledger maintained.",
-    notClaimed: ["Not publicly deployed; operates on a local branch and is not included in the public Xeno Ziran Simulator deployment."],
+    notClaimed: ["Not publicly deployed; operates on a local branch and is not included in the public P/A SYSTEM deployment."],
     status: "Research Beta · local only",
     sections: ["embodiment"],
     grounding: "verified",
