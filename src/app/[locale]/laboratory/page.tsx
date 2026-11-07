@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 const blurbs: Record<string, string> = {
-  simulators: "Xeno Ziran Simulator deployments, runtime experiments, and TII.",
+  simulators: "P/A SYSTEM deployments, runtime experiments, and TII.",
   sensors: "No sensor hardware records recovered.",
   robotics: "One robotics project listed; details not recovered.",
   materials: "No material experiment records recovered.",
